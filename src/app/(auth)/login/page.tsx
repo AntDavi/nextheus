@@ -58,7 +58,7 @@ const signUpSchema = z.object({
 type SignInFormData = z.infer<typeof signInSchema>;
 type SignUpFormData = z.infer<typeof signUpSchema>;
 
-export default function Login() {
+export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
@@ -117,7 +117,7 @@ export default function Login() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-md">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 items-center flex flex-col">
           <LogoIcon />
           <p className="text-muted-foreground mt-2">
             Tranquilidade com sua grana!

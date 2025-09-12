@@ -1,3 +1,18 @@
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="flex min-h-screen flex-col">{children}</div>;
+import { redirect } from "next/navigation";
+import { createClient } from "../../../utils/supabase/server";
+
+export default async function AuthLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getUser();
+
+  // Se o usuário já está logado, redireciona para o dashboard
+  if (data?.user) {
+    redirect("/dashboard");
+  }
+
+  return <>{children}</>;
 }
