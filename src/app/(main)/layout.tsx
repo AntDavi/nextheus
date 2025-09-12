@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "../../../utils/supabase/server";
+import Header from "./_components/header";
 
 export default async function Layout({
   children,
@@ -12,5 +13,12 @@ export default async function Layout({
     redirect("/login");
   }
 
-  return children;
+  return (
+    <html lang="pt-br">
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html>
+  );
 }

@@ -120,7 +120,7 @@ export default function LoginPage() {
         <div className="text-center mb-8 items-center flex flex-col">
           <LogoIcon />
           <p className="text-muted-foreground mt-2">
-            Tranquilidade com sua grana!
+            Bem-vindo ao Nextheus! Por favor, entre ou crie uma conta.
           </p>
         </div>
 
