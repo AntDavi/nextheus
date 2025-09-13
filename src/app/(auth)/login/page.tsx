@@ -26,7 +26,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { login, signup } from "./actions";
-import LogoIcon from "@/components/logo-icon";
+import Image from "next/image";
 
 // Schemas de validação
 const signInSchema = z.object({
@@ -118,7 +118,7 @@ export default function LoginPage() {
     <section className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8 items-center flex flex-col">
-          <LogoIcon />
+          <Image src="/nextheus-icon.svg" alt="Logo" width={50} height={50} />
           <p className="text-muted-foreground mt-2">
             Bem-vindo ao Nextheus! Por favor, entre ou crie uma conta.
           </p>

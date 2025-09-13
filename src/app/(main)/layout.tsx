@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { createClient } from "../../../utils/supabase/server";
 import Header from "./_components/header";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "./_components/app-sidebar";
 
 export default async function Layout({
   children,
@@ -14,11 +16,13 @@ export default async function Layout({
   }
 
   return (
-    <html lang="pt-br">
-      <body>
+    <SidebarProvider>
+      <AppSidebar />
+      <SidebarTrigger />
+      <main className="flex-1">
         <Header />
         {children}
-      </body>
-    </html>
+      </main>
+    </SidebarProvider>
   );
 }
