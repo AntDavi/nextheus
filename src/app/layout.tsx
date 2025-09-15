@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nextheus",
-  description: "Seu boilerplate Next.js",
+  description:
+    "Boilerplate moderno para Next.js com TypeScript, Tailwind CSS e componentes pré-construídos para acelerar seu desenvolvimento.",
 };
 
 export default function RootLayout({

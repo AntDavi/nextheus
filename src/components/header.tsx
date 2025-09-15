@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 import LogoIcon from "./logo";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Recursos", href: "#recursos" },
+  { name: "Documentação", href: "#docs" },
+  { name: "GitHub", href: "https://github.com/AntDavi/nextheus" },
 ];
 
 export const HeroHeader = () => {
@@ -104,8 +104,8 @@ export const HeroHeader = () => {
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="#">
-                    <span>Get Started</span>
+                  <Link href="/dashboard">
+                    <span>Começar</span>
                   </Link>
                 </Button>
               </div>
