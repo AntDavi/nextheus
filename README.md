@@ -65,10 +65,10 @@ Perder tempo com configurações básicas de projeto ao invés de partir para co
 - ✅ Recuperação de senha
 
 ### 💳 **Pagamentos e Assinaturas**
-- ✅ Integração com AbacatePay
-- ✅ Sistema de assinaturas
-- ✅ Webhooks configurados
-- ✅ Dashboard de pagamentos
+- [ ] Integração com AbacatePay
+- [ ] Sistema de assinaturas
+- [ ] Webhooks configurados
+- [ ] Dashboard de pagamentos
 
 ### 📱 **Experiência do Desenvolvedor**
 - ✅ Hot reload configurado
@@ -108,26 +108,9 @@ Edite o arquivo `.env.local` com suas configurações:
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-
-# AbacatePay
-ABACATEPAY_API_KEY=your_abacatepay_api_key
-ABACATEPAY_WEBHOOK_SECRET=your_webhook_secret
-
-# App
-NEXTAUTH_SECRET=your_nextauth_secret
-NEXTAUTH_URL=http://localhost:3000
 ```
 
-### **4. Configure o banco de dados**
-```bash
-# Execute as migrações do Supabase
-pnpm db:migrate
-
-# (Opcional) Populate com dados de exemplo
-pnpm db:seed
-```
-
-### **5. Inicie o servidor de desenvolvimento**
+### **4. Inicie o servidor de desenvolvimento**
 ```bash
 pnpm dev
 ```
@@ -161,25 +144,6 @@ nextheus/
 └── ...
 ```
 
-### **Scripts Disponíveis**
-
-```bash
-# Desenvolvimento
-pnpm dev              # Inicia servidor de desenvolvimento
-pnpm build            # Build para produção
-pnpm start            # Inicia servidor de produção
-pnpm lint             # Executa ESLint
-pnpm lint:fix         # Corrige problemas do ESLint
-
-# Banco de dados
-pnpm db:migrate       # Executa migrações
-pnpm db:seed          # Popula banco com dados
-pnpm db:reset         # Reseta banco de dados
-
-# Utilitários
-pnpm type-check       # Verifica tipos TypeScript
-pnpm format           # Formata código com Prettier
-```
 
 ### **Customização**
 
@@ -201,25 +165,6 @@ export const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
-```
-
-#### **💳 Configurando Pagamentos**
-```typescript
-// Configure webhooks do AbacatePay em:
-src/app/api/webhooks/abacatepay/route.ts
-```
-
-### **Deploy**
-
-#### **Vercel (Recomendado)**
-```bash
-# 1. Instale a CLI da Vercel
-pnpm add -g vercel
-
-# 2. Deploy
-vercel
-
-# 3. Configure as variáveis de ambiente no dashboard da Vercel
 ```
 
 #### **Outros Provedores**
@@ -260,24 +205,6 @@ export async function middleware(req) {
 
 ---
 
-## 🤝 **Contribuindo**
-
-Contribuições são bem-vindas! Para contribuir:
-
-1. **Fork** o projeto
-2. Crie uma **branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um **Pull Request**
-
-### **Diretrizes de Contribuição**
-- Siga os padrões de código existentes
-- Adicione testes para novas funcionalidades
-- Atualize a documentação quando necessário
-- Use conventional commits
-
----
-
 ## 📄 **Licença**
 
 Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
@@ -291,15 +218,6 @@ Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](L
 - [Tailwind CSS](https://tailwindcss.com/) - Framework CSS
 - [Shadcn/ui](https://ui.shadcn.com/) - Componentes de UI
 - [AbacatePay](https://abacatepay.com/) - Sistema de pagamentos
-
----
-
-## 📞 **Suporte**
-
-- 📧 **Email**: [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
-- 💬 **Discord**: [Link do Discord](https://discord.gg/seu-servidor)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/AntDavi/nextheus/issues)
-- 📖 **Wiki**: [Documentação Completa](https://github.com/AntDavi/nextheus/wiki)
 
 ---
 
